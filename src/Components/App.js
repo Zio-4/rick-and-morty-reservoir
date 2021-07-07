@@ -41,7 +41,12 @@ function App() {
             return filteredCharacters.sort((charA, charB) => {
               return charA.name <= charB.name ? -1 : 1
             })
+        } else if (nameSort === "Z - A") {
+            return filteredCharacters.sort((charA, charB) => {
+                return charA.name >= charB.name ? -1 : 1
+            })
         } else return filteredCharacters
+        
     }
 
     return (
