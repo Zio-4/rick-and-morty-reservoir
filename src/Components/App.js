@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import NewCharForm from './NewCharForm'
 import Header from './Header'
-import NavBar from './NavBar'
+import FilterButtons from './FilterButtons'
 import CharacterList from './CharacterList'
+import {Switch, Route} from "react-router-dom"
+import NavBar from "./NavBar"
 
 function App() {
 
@@ -26,6 +28,11 @@ function App() {
 
     function changeFilterValue(filterValue) {
         setStatusFilter(filterValue)
+    }
+
+    function addNewCharacter(newChar) {
+        const addedCharacter = [...characters, newChar]
+        setCharacters(addedCharacter)
     }
 
 
@@ -54,10 +61,23 @@ function App() {
 
     return (
         <div>
-            <Header />
-            <NavBar nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue}/>
-            <br></br>
-            <CharacterList characters={displayedCharacters()}/>
+            <Switch>
+                <Route path="/newcharacterform">
+                    <NavBar />
+                    <NewCharForm addNewCharacter={addNewCharacter} />
+                </Route>
+                <Route path="/characters">
+                    <Header />
+                    <NavBar />
+                    <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} />
+                    <br></br>
+                    <CharacterList characters={displayedCharacters()}/>
+                </Route>
+                <Route path="*">
+                    <NavBar />
+                    <h1>404 not found</h1>
+                </Route>
+            </Switch>
         </div>
     )
 }
