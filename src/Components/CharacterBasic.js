@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Character({name, status, species, image}) {
+function CharacterBasic({name, status, species, image}) {
     return (
-        <div className="ui link cards">
+        <div className="ui link card">
             <img src={image} alt="Character Avatar"></img>
             <p>Name: {name}</p>  
             <p>Status: {status}</p>
@@ -11,4 +11,4 @@ function Character({name, status, species, image}) {
     )
 }
 
-export default Character
+export default CharacterBasic

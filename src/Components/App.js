@@ -7,21 +7,18 @@ import CharacterList from './CharacterList'
 function App() {
 
     const [characters, setCharacters] = useState([])
-    const [nameSort, setNameSort] = useState("A - Z")
-    const [statusFilter, setStatusFilter] = useState("Alive")
+    const [nameSort, setNameSort] = useState("Default")
+    const [statusFilter, setStatusFilter] = useState("All")
 
    useEffect(() => {
         fetch('http://localhost:3000/characters')
              .then(r => r.json())
              .then(data => {
-                 console.log("data:", data)
                 setCharacters(data)
              })
     }, []) 
 
 
-
- console.log("characters:", characters)
 
     function changeSortValue(sortValue) {
         setNameSort(sortValue)
@@ -34,8 +31,14 @@ function App() {
 
 
     const displayedCharacters = () => {
-        // Needs to be default of all
-        const filteredCharacters = characters.filter(c => statusFilter === c.status)
+        if (nameSort === "Default" && statusFilter === "All") {
+            return characters
+        }
+       
+        const filteredCharacters = characters.filter(c => {
+             if (statusFilter === "All") {
+                return characters
+            } else return statusFilter === c.status})
 
         if (nameSort === "A - Z") {
             return filteredCharacters.sort((charA, charB) => {

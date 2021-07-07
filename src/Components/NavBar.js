@@ -18,19 +18,21 @@ function NavBar({nameSort, statusFilter, changeSortValue, changeFilterValue}) {
 
     return (
         <div>
-            <label>Sort by Name:</label>
+            <label>Sort by Name: </label>
             <select name="character-sort" value={nameSort} onChange={handleSortChange}>
+            <option value="Default">Default Order</option>
             <option value="A - Z">A - Z</option>
             <option value="Z - A">Z - A</option>
             </select>
 
-            <label>Filter by Status:</label>
+            <label>Filter by Status: </label>
             <select name="character-sort" value={statusFilter} onChange={handleFilterChange}>
+            <option value="All">All</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
             <option value="unknown">Unknown</option>
             </select>
-
+            
             <button onClick={handleButtonText}>{buttonText}</button>
             {buttonText === "Add New Character" ? null : <NewCharForm />}
         </div>
