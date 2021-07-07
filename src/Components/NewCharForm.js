@@ -9,13 +9,26 @@ function NewCharForm() {
         species: "",
         type: "",
         gender: "",
-        origin: "",
-        location: "",
-        episode: ""
+        origin: {name: ""},
+        location: {name: ""},
+        episode: [""]
     })
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        fetch('http://localhost:3000/characters', {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({characters: {formData}})
+            })
+            .then(r => r.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
+
     return (
-        <form>
+        <form >
             <label>Character Image (Must be hosted from another source): </label>
             <input 
                 type="text"
@@ -61,7 +74,7 @@ function NewCharForm() {
             <label>Origin: </label>
             <input 
                 type="text"
-                value={formData.origin}
+                value={formData.origin.name}
                 placeholder="Where is the character from?"
                 onChange={(e) => setFormData({...formData, origin: e.target.value})}
             />
@@ -79,8 +92,7 @@ function NewCharForm() {
                 placeholder="1, 2, 3"
                 onChange={(e) => setFormData({...formData, episode: e.target.value})}
             />
-            
-
+            <button onSubmit={handleSubmit}>Submit</button>
         </form>
     )
 }
