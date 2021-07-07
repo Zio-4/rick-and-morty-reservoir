@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
+import NewCharForm from './NewCharForm'
 
 function NavBar({nameSort, statusFilter, changeSortValue, changeFilterValue}) {
+    const [buttonText, setButtonText] = useState("Add New Character")
     
     function handleSortChange(e) {
         changeSortValue(e.target.value)
@@ -8,6 +10,10 @@ function NavBar({nameSort, statusFilter, changeSortValue, changeFilterValue}) {
 
     function handleFilterChange(e) {
         changeFilterValue(e.target.value)
+    }
+
+    function handleButtonText() {
+        buttonText === "Add New Character" ? setButtonText("Hide Character Form") : setButtonText("Add New Character")
     }
 
     return (
@@ -25,7 +31,8 @@ function NavBar({nameSort, statusFilter, changeSortValue, changeFilterValue}) {
             <option value="unknown">Unknown</option>
             </select>
 
-            <button>Add New Character</button>
+            <button onClick={handleButtonText}>{buttonText}</button>
+            {buttonText === "Add New Character" ? null : <NewCharForm />}
         </div>
     )
 }
