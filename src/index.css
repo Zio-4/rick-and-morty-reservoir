@@ -10,4 +10,37 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} 
+
+#header {
+  text-align: center;
+
 }
+
+.App-header {
+  background-image: url("./images/Spaceimg.jpeg")
+}
+
+nav a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: rgb(0, 175, 199);
+  border-bottom: 2px solid rgb(160, 206, 72);
+  transition: 0.1s;
+}
+
+nav a:hover,
+nav a:active {
+  color: rgb(60, 210, 255);
+  border-bottom: 2px solid rgb(0, 255, 21);
+}
+
+nav a.active {
+  color: red;
+}
+
+

@@ -13,22 +13,29 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
 
 
     return (
-        <div>
+        <div >
             <label>Sort by Name: </label>
-            <select name="character-sort" value={nameSort} onChange={handleSortChange}>
+            <select className="ui compact selection dropdown" name="character-sort" value={nameSort} onChange={handleSortChange}>
             <option value="Default">Default Order</option>
             <option value="A - Z">A - Z</option>
             <option value="Z - A">Z - A</option>
             </select>
 
             <label>Filter by Status: </label>
-            <select name="character-sort" value={statusFilter} onChange={handleFilterChange}>
+            <select className="ui compact selection dropdown" name="character-sort" value={statusFilter} onChange={handleFilterChange}>
             <option value="All">All</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
             <option value="unknown">Unknown</option>
             </select>
-            <Link to="/newcharacterform">Add New Character</Link>
+            <Link to="/newcharacterform">
+                <div className="ui animated fade inverted green button" tabIndex="0">
+                    <div className="visible content">Add New Character</div>
+                    <div className="hidden content">
+                        <i className="user plus icon"></i>
+                    </div>
+                </div>
+            </Link>
         </div>
     )
 }

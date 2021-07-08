@@ -3,7 +3,7 @@ import React from 'react'
 
 function Header() {
     return (
-        <div>
+        <div id="header">
             <h1>Rick and Morty Reservior</h1>
             {/*<Link>By Philip Ziolkowski</Link>*/}
         </div>

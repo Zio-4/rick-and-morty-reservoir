@@ -5,6 +5,7 @@ import FilterButtons from './FilterButtons'
 import CharacterList from './CharacterList'
 import {Switch, Route} from "react-router-dom"
 import NavBar from "./NavBar"
+import CharacterDetailed from './CharacterDetailed'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
     const [statusFilter, setStatusFilter] = useState("All")
 
    useEffect(() => {
-        fetch('http://localhost:3000/characters')
+        fetch('http://localhost:3001/characters')
              .then(r => r.json())
              .then(data => {
                 setCharacters(data)
@@ -60,23 +61,24 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="App-header">
+            <Header />
+            <NavBar />
             <Switch>
                 <Route path="/newcharacterform">
-                    <NavBar />
                     <NewCharForm addNewCharacter={addNewCharacter} />
                 </Route>
-                <Route path="/characters">
-                    <Header />
-                    <NavBar />
+                <Route exact path={`/characters/:id`}>
+                    <CharacterDetailed />
+                </Route>
+                <Route exact path="/">
                     <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} />
                     <br></br>
                     <CharacterList characters={displayedCharacters()}/>
                 </Route>
-                <Route path="*">
-                    <NavBar />
+               <Route path="*">
                     <h1>404 not found</h1>
-                </Route>
+                </Route> 
             </Switch>
         </div>
     )
