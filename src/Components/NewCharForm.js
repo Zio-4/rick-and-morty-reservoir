@@ -132,10 +132,10 @@ function NewCharForm({addNewCharacter}) {
                             value={formData.image}
                             placeholder="https://rickandmortyapi.com/api/character/avatar/19.jpeg"
                             onChange={handleChange}
-                        /> 
-                        <div className="ui inverted green submit button" tabIndex="0">
+                        />
+                        <button className="ui inverted green submit button" tabIndex="0">
                             Submit Character
-                        </div>
+                        </button>
                 </div>
             </div>
         </form>

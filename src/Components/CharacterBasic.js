@@ -6,17 +6,15 @@ function CharacterBasic({name, status, species, image, id}) {
 
 
     return (
-    <>
-        <Link to={`/characters/${id}`}>
+    
+    <Link to={`/characters/${id}`}>
         <div className="ui link card">
-            <img src={image} alt="Character Avatar"></img>
-            <p>Name: {name}</p>  
-            <p>Status: {status}</p>
-            <p>Species: {species}</p>
+                <img src={image} alt="Character Avatar"></img>
+                <p className="center aligned">Name: {name}</p>  
+                <p className="center aligned">Status: {status}</p>
+                <p className="center aligned">Species: {species}</p>
         </div>
-        </Link>
-
-    </>
+    </Link>
     )
 }
 

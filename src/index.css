@@ -12,22 +12,58 @@ code {
     monospace;
 } 
 
-#header {
-  text-align: center;
-
+@font-face {
+  font-family: "Rick&Morty";
+  src: url("./Font/get_schwifty.ttf");
 }
 
-.App-header {
-  background-image: url("./images/Spaceimg.jpeg")
+@font-face {
+  font-family: "Schoolbell";
+  src: url("./Font/Schoolbell-Regular.ttf");
+}
+
+#header h1 {
+  text-align: center;
+  font-family: 'Rick&Morty', serif;
+    font-size: 100px;
+    line-height: 1.0;
+    color: #02b1c8;	
+    margin: 0px 0 25px;
+    padding: 50px;
+    text-shadow: 0.02em 0.02em 0.02em #7ffa67,
+                 -0.02em -0.02em 0.02em #7ffa67,
+                 0 0 0.2em #7ffa67;
+    animation: textShadow 2s linear infinite alternate;
+}
+
+.filterBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1pt;
+  padding: 50px;
+  gap: 100px;
+}
+
+.dropdown {
+  color: white;
+  font-size: 16pt;
+}
+
+#root {
+  background-image: url("./images/Spaceimg.jpeg");
+}
+
+nav {
+  justify-content: center;
+  align-items: center;
 }
 
 nav a {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   margin: 1rem 2rem;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 16pt;
   color: rgb(0, 175, 199);
   border-bottom: 2px solid rgb(160, 206, 72);
   transition: 0.1s;
@@ -41,6 +77,10 @@ nav a:active {
 
 nav a.active {
   color: red;
+}
+
+.ui.link.card {
+  color:black;
 }
 
 

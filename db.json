@@ -15106,6 +15106,28 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/670",
       "created": "2020-08-13T12:56:31.130Z"
+    },
+    {
+      "image": "",
+      "name": "fasd",
+      "status": "fadsfda",
+      "species": "fads",
+      "type": "",
+      "gender": "",
+      "origin": "",
+      "location": "",
+      "id": 671
+    },
+    {
+      "image": "",
+      "name": "poopybutthole",
+      "status": "ffads",
+      "species": "fadsfds",
+      "type": "",
+      "gender": "",
+      "origin": "",
+      "location": "",
+      "id": 672
     }
   ],
   "locations": []

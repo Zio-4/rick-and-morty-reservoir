@@ -22,7 +22,7 @@ function CharacterDetailed() {
 
     return (
     <>
-        <div className="ui link card">
+        <div className="ui centered card">
         <img src={image} alt="Character Avatar"></img>
             <p>Name: {name}</p>  
             <p>Status: {status}</p>
