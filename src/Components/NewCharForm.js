@@ -64,13 +64,15 @@ function NewCharForm({addNewCharacter}) {
                         </div>
                         <div className="field">
                             <label>Status: </label>
-                            <input 
-                                type="text"
+                            <select
                                 id="status"
                                 value={formData.status}
-                                placeholder="Alive, Dead, Unknown"
                                 onChange={handleChange}
-                            />
+                            >
+                            <option value="Alive">Alive</option>
+                            <option value="Dead">Dead</option>
+                            <option value="unknown">Unknown</option>
+                            </select>
                         </div>
                     </div>
                     <div className="three fields">

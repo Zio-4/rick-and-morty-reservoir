@@ -24,7 +24,7 @@ function CharacterDetailed() {
     <>
         <div className="ui centered card">
         <img src={image} alt="Character Avatar"></img>
-            <p>Name: {name}</p>  
+            <p><b>Name: {name}</b></p>  
             <p>Status: {status}</p>
             <p>Species: {species}</p>
             <p>Type: {type}</p>

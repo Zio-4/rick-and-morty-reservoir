@@ -20,7 +20,7 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
         <div className="ui centered grid">
             <div className="ui inverted input">
                 <label className="search">Search for a character: </label>
-                <input type="text" placeholder="Search for a character.." value={search} onChange={handleSearch}></input>
+                <input type="text" placeholder="'Pickle Morty'" value={search} onChange={handleSearch}></input>
             </div>
 
             <label className="dropdown">Sort by Name: </label>
@@ -37,6 +37,8 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
             <option value="Dead">Dead</option>
             <option value="unknown">Unknown</option>
             </select>
+            
+            <div id="submitBtn">
             <Link to="/newcharacterform">
                 <div className="ui animated fade inverted green button" tabIndex="0">
                     <div className="visible content">Add New Character</div>
@@ -45,7 +47,8 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
                     </div>
                 </div>
             </Link>
-        </div>
+            </div>
+    </div>
     )
 }
 

@@ -15106,6 +15106,50 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/670",
       "created": "2020-08-13T12:56:31.130Z"
+    },
+    {
+      "image": "",
+      "name": "poopy",
+      "status": "dead",
+      "species": "",
+      "type": "",
+      "gender": "",
+      "origin": "",
+      "location": "",
+      "id": 671
+    },
+    {
+      "image": "",
+      "name": "test",
+      "status": "Dead",
+      "species": "",
+      "type": "",
+      "gender": "",
+      "origin": "",
+      "location": "",
+      "id": 672
+    },
+    {
+      "image": "",
+      "name": "poopy1",
+      "status": "unknown",
+      "species": "",
+      "type": "",
+      "gender": "",
+      "origin": "",
+      "location": "",
+      "id": 673
+    },
+    {
+      "image": "",
+      "name": "lalalal",
+      "status": "Dead",
+      "species": "",
+      "type": "",
+      "gender": "",
+      "origin": "",
+      "location": "",
+      "id": 674
     }
   ],
   "locations": [
