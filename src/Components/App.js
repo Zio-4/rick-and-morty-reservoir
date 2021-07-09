@@ -8,6 +8,7 @@ import NavBar from "./NavBar"
 import CharacterDetailed from './CharacterDetailed'
 import ClickInfo from './ClickInfo'
 import Author from './Author'
+import Locations from './Locations'
 
 function App() {
 
@@ -72,6 +73,9 @@ function App() {
                 </Route>
                 <Route exact path={`/characters/:id`}>
                     <CharacterDetailed />
+                </Route>
+                <Route path="/locations">
+                    <Locations />
                 </Route>
                 <Route exact path="/">
                     <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} />
