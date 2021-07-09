@@ -6,6 +6,7 @@ import CharacterList from './CharacterList'
 import {Switch, Route} from "react-router-dom"
 import NavBar from "./NavBar"
 import CharacterDetailed from './CharacterDetailed'
+import ClickInfo from './ClickInfo'
 
 function App() {
 
@@ -73,7 +74,7 @@ function App() {
                 </Route>
                 <Route exact path="/">
                     <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} />
-                    <br></br>
+                    <ClickInfo />
                     <CharacterList characters={displayedCharacters()}/>
                 </Route>
                <Route path="*">

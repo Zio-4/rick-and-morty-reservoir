@@ -15,14 +15,14 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
     return (
         <div className="ui centered grid">
             <label className="dropdown">Sort by Name: </label>
-            <select className="ui compact selection dropdown" name="character-sort" value={nameSort} onChange={handleSortChange}>
+            <select  name="character-sort" value={nameSort} onChange={handleSortChange}>
             <option value="Default">Default Order</option>
             <option value="A - Z">A - Z</option>
             <option value="Z - A">Z - A</option>
             </select>
 
             <label className="dropdown">Filter by Status: </label>
-            <select className="ui compact selection dropdown" name="character-sort" value={statusFilter} onChange={handleFilterChange}>
+            <select  name="character-sort" value={statusFilter} onChange={handleFilterChange}>
             <option value="All">All</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
