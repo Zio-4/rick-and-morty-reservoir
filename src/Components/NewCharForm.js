@@ -69,6 +69,7 @@ function NewCharForm({addNewCharacter}) {
                                 value={formData.status}
                                 onChange={handleChange}
                             >
+                            <option value="">Select a status</option>
                             <option value="Alive">Alive</option>
                             <option value="Dead">Dead</option>
                             <option value="unknown">Unknown</option>
