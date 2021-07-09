@@ -13,8 +13,7 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
 
     function handleSearch(e) {
         updateSearch(e.target.value)
-    } 
-
+    }
 
     return (
         <div className="ui centered grid">
