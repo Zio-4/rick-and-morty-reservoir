@@ -10,11 +10,9 @@ function CharacterDetailed() {
         fetch(`http://localhost:3001/characters/${params.id}`)
         .then(r => r.json())
         .then(data => {
-            console.log("data:", data)
             setCharacter(data)})
     }, [params.id])
 
-    console.log("character:", character)
 
     if (!character) return <h2>Loading...</h2>
 

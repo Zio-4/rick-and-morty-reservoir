@@ -20,13 +20,15 @@ function NewCharForm({addNewCharacter}) {
         })
     }
 
+    console.log(formData)
+
 
     function handleSubmit(e) {
         e.preventDefault()
         fetch('http://localhost:3001/characters', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({image: formData.image, name: formData.name, status: formData.status, species: formData.species, type: formData.type, gender: formData.gender, origin: formData.origin.name, location: formData.location.name})
+            body: JSON.stringify({image: formData.image, name: formData.name, status: formData.status, species: formData.species, type: formData.type, gender: formData.gender, origin: {name: formData.origin.name}, location: {name: formData.location.name}})
             })
             .then(r => r.json())
             .then(data => {
