@@ -85,8 +85,11 @@ nav a.active {
   color: red;
 }
 
-.ui.link.card {
+.ui.link.card a p{
   color:black;
 }
 
+.dropdown {
+  padding-top: 15px;
+}
 

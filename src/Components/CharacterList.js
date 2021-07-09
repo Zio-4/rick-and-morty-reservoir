@@ -7,7 +7,7 @@ function CharacterList({characters}) {
 
 
     return (
-        <div className="ui grid six column cards">
+        <div className="ui six cards">
             {displayCharacters}
         </div>
     )

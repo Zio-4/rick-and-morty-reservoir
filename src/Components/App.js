@@ -48,16 +48,16 @@ function App() {
        
         const filteredCharacters = characters.filter(c => {
              if (statusFilter === "All") {
-                return characters
+                return true
             } else return statusFilter === c.status})
 
         if (nameSort === "A - Z") {
             return filteredCharacters.sort((charA, charB) => {
-              return charA.name <= charB.name ? -1 : 1
+              return charA.name.toLowerCase() <= charB.name.toLowerCase() ? -1 : 1
             })
         } else if (nameSort === "Z - A") {
             return filteredCharacters.sort((charA, charB) => {
-                return charA.name >= charB.name ? -1 : 1
+                return charA.name.toLowerCase() >= charB.name.toLowerCase() ? -1 : 1
             })
         } else return filteredCharacters
         
