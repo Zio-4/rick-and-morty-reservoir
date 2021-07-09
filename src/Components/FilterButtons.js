@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 
-function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterValue}) {
+function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterValue, search, updateSearch}) {
     
     function handleSortChange(e) {
         changeSortValue(e.target.value)
@@ -11,9 +11,18 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
         changeFilterValue(e.target.value)
     }
 
+    function handleSearch(e) {
+        updateSearch(e.target.value)
+    } 
+
 
     return (
         <div className="ui centered grid">
+            <div className="ui inverted input">
+                <label className="search">Search for a character: </label>
+                <input type="text" placeholder="Search for a character.." value={search} onChange={handleSearch}></input>
+            </div>
+
             <label className="dropdown">Sort by Name: </label>
             <select  name="character-sort" value={nameSort} onChange={handleSortChange}>
             <option value="Default">Default Order</option>

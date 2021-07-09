@@ -15,6 +15,7 @@ function App() {
     const [characters, setCharacters] = useState([])
     const [nameSort, setNameSort] = useState("Default")
     const [statusFilter, setStatusFilter] = useState("All")
+    const [search, setSearch] = useState("")
 
    useEffect(() => {
         fetch('http://localhost:3001/characters')
@@ -39,14 +40,18 @@ function App() {
         setCharacters(addedCharacter)
     }
 
+    function updateSearch(searchValue) {
+        setSearch(searchValue)
+    }
+
 
 
     const displayedCharacters = () => {
-        if (nameSort === "Default" && statusFilter === "All") {
+        if (nameSort === "Default" && statusFilter === "All" && search === "") {
             return characters
         }
        
-        const filteredCharacters = characters.filter(c => {
+        const filteredCharacters = characters.filter(c => c.name.toLowerCase().includes(search.toLowerCase())).filter(c => {
              if (statusFilter === "All") {
                 return true
             } else return statusFilter === c.status})
@@ -78,7 +83,7 @@ function App() {
                     <Locations />
                 </Route>
                 <Route exact path="/">
-                    <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} />
+                    <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} search={search} updateSearch={updateSearch}/>
                     <ClickInfo />
                     <CharacterList characters={displayedCharacters()}/>
                 </Route>
