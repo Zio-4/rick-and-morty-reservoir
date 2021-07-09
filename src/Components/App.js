@@ -7,6 +7,7 @@ import {Switch, Route} from "react-router-dom"
 import NavBar from "./NavBar"
 import CharacterDetailed from './CharacterDetailed'
 import ClickInfo from './ClickInfo'
+import Author from './Author'
 
 function App() {
 
@@ -81,6 +82,7 @@ function App() {
                     <h1>404 not found</h1>
                 </Route> 
             </Switch>
+            <Author />
         </div>
     )
 }

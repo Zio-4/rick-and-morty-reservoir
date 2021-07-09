@@ -17,6 +17,12 @@ code {
   src: url("./Font/get_schwifty.ttf");
 }
 
+#author {
+  text-align: center;
+  color: white;
+  padding: 167.5px ;
+}
+
 #header h1 {
   text-align: center;
   font-family: 'Rick&Morty', serif;
