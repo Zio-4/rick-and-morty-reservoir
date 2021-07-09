@@ -13,7 +13,7 @@ function FilterButtons({nameSort, statusFilter, changeSortValue, changeFilterVal
 
 
     return (
-        <div className="filterBtns">
+        <div className="ui centered grid">
             <label className="dropdown">Sort by Name: </label>
             <select className="ui compact selection dropdown" name="character-sort" value={nameSort} onChange={handleSortChange}>
             <option value="Default">Default Order</option>

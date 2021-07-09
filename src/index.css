@@ -17,11 +17,6 @@ code {
   src: url("./Font/get_schwifty.ttf");
 }
 
-@font-face {
-  font-family: "Schoolbell";
-  src: url("./Font/Schoolbell-Regular.ttf");
-}
-
 #header h1 {
   text-align: center;
   font-family: 'Rick&Morty', serif;
@@ -36,13 +31,8 @@ code {
     animation: textShadow 2s linear infinite alternate;
 }
 
-.filterBtns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1pt;
-  padding: 50px;
-  gap: 100px;
+.ui.centered.grid {
+  padding: 20px;
 }
 
 .dropdown {
@@ -54,13 +44,9 @@ code {
   background-image: url("./images/Spaceimg.jpeg");
 }
 
-nav {
-  justify-content: center;
-  align-items: center;
-}
 
 nav a {
-  display: inline-flex;
+  
   margin: 1rem 2rem;
   text-decoration: none;
   font-size: 16pt;
