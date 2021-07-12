@@ -15106,6 +15106,36 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/670",
       "created": "2020-08-13T12:56:31.130Z"
+    },
+    {
+      "image": "https://cdn.vox-cdn.com/thumbor/heXu37IbDvVy6Qbo1wbPjNvi6Ys=/0x0:712x423/1200x800/filters:focal(385x120:497x232)/cdn.vox-cdn.com/uploads/chorus_image/image/55531035/Screen_Shot_2017_06_30_at_3.17.00_PM.0.png",
+      "name": "Pickler rick",
+      "status": "unknown",
+      "species": "fdasfsd",
+      "type": "fads",
+      "gender": "fasd",
+      "origin": {
+        "name": "fsad"
+      },
+      "location": {
+        "name": "fasd"
+      },
+      "id": 671
+    },
+    {
+      "image": "https://cdn.vox-cdn.com/thumbor/heXu37IbDvVy6Qbo1wbPjNvi6Ys=/0x0:712x423/1200x800/filters:focal(385x120:497x232)/cdn.vox-cdn.com/uploads/chorus_image/image/55531035/Screen_Shot_2017_06_30_at_3.17.00_PM.0.png",
+      "name": "Pickler rick",
+      "status": "unknown",
+      "species": "fasd",
+      "type": "fdas",
+      "gender": "fads",
+      "origin": {
+        "name": "fasd"
+      },
+      "location": {
+        "name": "fasd"
+      },
+      "id": 672
     }
   ],
   "locations": [

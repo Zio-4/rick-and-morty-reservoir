@@ -82,7 +82,7 @@ function App() {
                 <Route path="/locations">
                     <Locations />
                 </Route>
-                <Route exact path="/">
+                <Route path="/">
                     <FilterButtons nameSort={nameSort} statusFilter={statusFilter} changeSortValue={changeSortValue} changeFilterValue={changeFilterValue} addNewCharacter={addNewCharacter} search={search} updateSearch={updateSearch}/>
                     <ClickInfo />
                     <CharacterList characters={displayedCharacters()}/>
